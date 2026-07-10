@@ -11,7 +11,7 @@ class Program
         PermanentEmployee e1 = new PermanentEmployee
         {
             EmployeeId = 101,
-            Name = "Rahul",
+            Name = "Kartik",
             Department = "HR"
         };
         e1.SetLeaveBalance();
@@ -19,7 +19,7 @@ class Program
         ContractEmployee e2 = new ContractEmployee
         {
             EmployeeId = 102,
-            Name = "Priya",
+            Name = "Ram",
             Department = "IT"
         };
         e2.SetLeaveBalance();
