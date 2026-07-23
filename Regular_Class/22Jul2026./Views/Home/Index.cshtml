@@ -1,0 +1,35 @@
+﻿@model _22Jul2026.Models.Product
+
+<div class="text-center">
+    <h1 class="display-4">Add Product</h1>
+</div>
+
+<form asp-controller="Home" asp-action="Index" method="post">
+
+    <div>
+        <label>Name</label>
+        <input type="text" name="Name" class="form-control" />
+    </div>
+    <br />
+
+    <div>
+        <label>Price</label>
+        <input type="number" name="Price" class="form-control" />
+    </div>
+    <br />
+
+    <div>
+        <label>Category</label>
+        <input type="text" name="Category" class="form-control" />
+    </div>
+    <br />
+
+    <div>
+        <label>Stock</label>
+        <input type="number" name="Stock" class="form-control" />
+    </div>
+    <br />
+
+    <button type="submit">Save Product</button>
+
+</form>
