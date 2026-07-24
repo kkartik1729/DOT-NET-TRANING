@@ -1,0 +1,22 @@
+@model AutomobileManagementSystem.Models.Automobile
+
+@{
+    ViewData["Title"] = "Registration Successful";
+}
+
+<div class="alert alert-success">Automobile Registered Successfully</div>
+
+<table class="data-table">
+    <tr>
+        <th>Vehicle Name</th>
+        <td>@Model.VehicleName</td>
+    </tr>
+    <tr>
+        <th>Brand</th>
+        <td>@Model.Brand</td>
+    </tr>
+</table>
+
+<p>
+    <a asp-controller="Manufacturer" asp-action="Index" class="btn-submit">View Manufacturer Details</a>
+</p>

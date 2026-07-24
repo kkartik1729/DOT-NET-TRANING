@@ -1,0 +1,66 @@
+@model AutomobileManagementSystem.Models.Automobile
+
+@{
+    ViewData["Title"] = "Automobile Registration";
+}
+
+<h2>Automobile Registration</h2>
+
+@if (TempData["ManufacturerBlockedMessage"] != null)
+{
+    <div class="alert alert-warning">@TempData["ManufacturerBlockedMessage"]</div>
+}
+
+<form asp-controller="Automobile" asp-action="Register" method="post">
+    @Html.AntiForgeryToken()
+    <div asp-validation-summary="ModelOnly" class="validation-summary"></div>
+
+    <div class="form-group">
+        <label asp-for="VehicleId"></label>
+        <input asp-for="VehicleId" class="form-control" />
+        <span asp-validation-for="VehicleId" class="field-validation-error"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="VehicleName"></label>
+        <input asp-for="VehicleName" class="form-control" />
+        <span asp-validation-for="VehicleName" class="field-validation-error"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Brand"></label>
+        <input asp-for="Brand" class="form-control" />
+        <span asp-validation-for="Brand" class="field-validation-error"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ModelYear"></label>
+        <input asp-for="ModelYear" class="form-control" />
+        <span asp-validation-for="ModelYear" class="field-validation-error"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Price"></label>
+        <input asp-for="Price" class="form-control" />
+        <span asp-validation-for="Price" class="field-validation-error"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="FuelType"></label>
+        <select asp-for="FuelType" class="form-control">
+            <option value="">-- Select Fuel Type --</option>
+            <option value="Petrol">Petrol</option>
+            <option value="Diesel">Diesel</option>
+            <option value="Electric">Electric</option>
+            <option value="Hybrid">Hybrid</option>
+            <option value="CNG">CNG</option>
+        </select>
+        <span asp-validation-for="FuelType" class="field-validation-error"></span>
+    </div>
+
+    <button type="submit" class="btn-submit">Register</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

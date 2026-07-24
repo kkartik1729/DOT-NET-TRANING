@@ -1,0 +1,29 @@
+@model List<AutomobileManagementSystem.Models.Manufacturer>
+
+@{
+    ViewData["Title"] = "Manufacturer Details";
+}
+
+<h2>Manufacturer Details</h2>
+
+<table class="data-table">
+    <thead>
+        <tr>
+            <th>Manufacturer Name</th>
+            <th>Country</th>
+            <th>Contact Number</th>
+            <th>Email Address</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var manufacturer in Model)
+        {
+            <tr>
+                <td>@manufacturer.Name</td>
+                <td>@manufacturer.Country</td>
+                <td>@manufacturer.ContactNumber</td>
+                <td>@manufacturer.EmailAddress</td>
+            </tr>
+        }
+    </tbody>
+</table>
