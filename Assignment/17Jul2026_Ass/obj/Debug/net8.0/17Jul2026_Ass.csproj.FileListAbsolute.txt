@@ -1,0 +1,14 @@
+C:\Users\hande\OneDrive\Desktop\DOT-NET TRANING\Assignment\17Jul2026_Ass\bin\Debug\net8.0\17Jul2026_Ass.exe
+C:\Users\hande\OneDrive\Desktop\DOT-NET TRANING\Assignment\17Jul2026_Ass\bin\Debug\net8.0\17Jul2026_Ass.deps.json
+C:\Users\hande\OneDrive\Desktop\DOT-NET TRANING\Assignment\17Jul2026_Ass\bin\Debug\net8.0\17Jul2026_Ass.runtimeconfig.json
+C:\Users\hande\OneDrive\Desktop\DOT-NET TRANING\Assignment\17Jul2026_Ass\bin\Debug\net8.0\17Jul2026_Ass.dll
+C:\Users\hande\OneDrive\Desktop\DOT-NET TRANING\Assignment\17Jul2026_Ass\bin\Debug\net8.0\17Jul2026_Ass.pdb
+C:\Users\hande\OneDrive\Desktop\DOT-NET TRANING\Assignment\17Jul2026_Ass\obj\Debug\net8.0\17Jul2026_Ass.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hande\OneDrive\Desktop\DOT-NET TRANING\Assignment\17Jul2026_Ass\obj\Debug\net8.0\17Jul2026_Ass.AssemblyInfoInputs.cache
+C:\Users\hande\OneDrive\Desktop\DOT-NET TRANING\Assignment\17Jul2026_Ass\obj\Debug\net8.0\17Jul2026_Ass.AssemblyInfo.cs
+C:\Users\hande\OneDrive\Desktop\DOT-NET TRANING\Assignment\17Jul2026_Ass\obj\Debug\net8.0\17Jul2026_Ass.csproj.CoreCompileInputs.cache
+C:\Users\hande\OneDrive\Desktop\DOT-NET TRANING\Assignment\17Jul2026_Ass\obj\Debug\net8.0\17Jul2026_Ass.dll
+C:\Users\hande\OneDrive\Desktop\DOT-NET TRANING\Assignment\17Jul2026_Ass\obj\Debug\net8.0\refint\17Jul2026_Ass.dll
+C:\Users\hande\OneDrive\Desktop\DOT-NET TRANING\Assignment\17Jul2026_Ass\obj\Debug\net8.0\17Jul2026_Ass.pdb
+C:\Users\hande\OneDrive\Desktop\DOT-NET TRANING\Assignment\17Jul2026_Ass\obj\Debug\net8.0\17Jul2026_Ass.genruntimeconfig.cache
+C:\Users\hande\OneDrive\Desktop\DOT-NET TRANING\Assignment\17Jul2026_Ass\obj\Debug\net8.0\ref\17Jul2026_Ass.dll
