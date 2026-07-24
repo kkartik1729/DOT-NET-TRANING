@@ -1,0 +1,29 @@
+﻿@model List<_23Jul2026.Models.Product>
+<h3>
+    Stationary Item List
+</h3>
+<table border="1" cellspacing="10">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.id
+            </td>
+            <td>
+                @item.Name
+            </td>
+            <td>
+                @item.Price
+            </td>
+        </tr>
+    }
+</table>
+
+<br />
+
+<a href="@Url.Action("Logout", "Home")">Logout</a>
