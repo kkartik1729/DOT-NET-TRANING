@@ -1,0 +1,29 @@
+@model List<EmployeeManagementSystem.Models.Department>
+
+@{
+    ViewData["Title"] = "Department List";
+}
+
+<h2>Department List</h2>
+
+<table class="data-table">
+    <thead>
+        <tr>
+            <th>Department Name</th>
+            <th>Department Head</th>
+            <th>Head Contact</th>
+            <th>Head Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var department in Model)
+        {
+            <tr>
+                <td>@department.Name</td>
+                <td>@department.DepartmentHead</td>
+                <td>@department.HeadContact</td>
+                <td>@department.HeadEmail</td>
+            </tr>
+        }
+    </tbody>
+</table>
