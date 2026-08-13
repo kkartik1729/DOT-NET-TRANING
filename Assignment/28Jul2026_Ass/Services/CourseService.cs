@@ -4,8 +4,6 @@ namespace CourseRegistrationSystem.Services
 {
     public class CourseService : ICourseService
     {
-        // In-memory sample data. Static so it persists across requests
-        // within the same running instance of the app.
         private static readonly List<Course> _courses = new()
         {
             new Course { Id = 1, Title = "Introduction to Programming", Credits = 4, duration = 12 },
