@@ -16,8 +16,8 @@ namespace _06Aug_2026.Services
 
         public void AddOrder(Order order)
         {
-            context.orders.Add(order); //implementation of adding new Order with help of add
-            context.SaveChanges(); //saving new added order in table
+            context.orders.Add(order); 
+            context.SaveChanges(); 
         }
 
         public void DeleteOrder(int id)
