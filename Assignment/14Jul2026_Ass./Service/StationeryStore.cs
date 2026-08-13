@@ -14,7 +14,7 @@ namespace StationeryStoreManagement.Services
         private StationeryItem purchasedItem;
         private int purchasedQuantity;
 
-        // Add Item
+  
         public void AddItem(StationeryItem item)
         {
             if (items.Any(i => i.ItemId == item.ItemId))
@@ -25,7 +25,7 @@ namespace StationeryStoreManagement.Services
             Console.WriteLine("\nItem Added Successfully.");
         }
 
-        // Display All Items
+       
         public void DisplayItems()
         {
             if (items.Count == 0)
@@ -46,7 +46,7 @@ namespace StationeryStoreManagement.Services
             Console.WriteLine("-------------------------------------------------------------");
         }
 
-        // Search by ID
+     
         public StationeryItem SearchById(int id)
         {
             var item = items.FirstOrDefault(i => i.ItemId == id);
@@ -57,7 +57,7 @@ namespace StationeryStoreManagement.Services
             return item;
         }
 
-        // Search by Name
+    
         public StationeryItem SearchByName(string name)
         {
             var item = items.FirstOrDefault(i =>
@@ -69,7 +69,6 @@ namespace StationeryStoreManagement.Services
             return item;
         }
 
-        // Update Item
         public void UpdateItem(int id, double newPrice, int newQuantity, string newBrand)
         {
             StationeryItem item = SearchById(id);
@@ -81,7 +80,6 @@ namespace StationeryStoreManagement.Services
             Console.WriteLine("\nItem Updated Successfully.");
         }
 
-        // Delete Item
         public void DeleteItem(int id)
         {
             StationeryItem item = SearchById(id);
@@ -100,7 +98,6 @@ namespace StationeryStoreManagement.Services
             }
         }
 
-        // Purchase Item
         public void PurchaseItem(int id, int qty)
         {
             StationeryItem item = SearchById(id);
@@ -116,7 +113,6 @@ namespace StationeryStoreManagement.Services
             GenerateBill();
         }
 
-        // Generate Bill
         public void GenerateBill()
         {
             double subTotal = purchasedItem.Price * purchasedQuantity;
@@ -150,7 +146,6 @@ namespace StationeryStoreManagement.Services
             Console.WriteLine("==============================================");
         }
 
-        // View Low Stock Items
         public void ViewLowStockItems()
         {
             var lowStockItems = items.Where(i => i.Quantity < 5).ToList();
@@ -169,7 +164,6 @@ namespace StationeryStoreManagement.Services
             }
         }
 
-        // Sort By Price
         public void SortByPrice()
         {
             items = items.OrderBy(i => i.Price).ToList();
@@ -179,7 +173,6 @@ namespace StationeryStoreManagement.Services
             DisplayItems();
         }
 
-        // Sort By Name
         public void SortByName()
         {
             items = items.OrderBy(i => i.ItemName).ToList();
@@ -189,7 +182,6 @@ namespace StationeryStoreManagement.Services
             DisplayItems();
         }
 
-        // Sort By Quantity
         public void SortByQuantity()
         {
             items = items.OrderByDescending(i => i.Quantity).ToList();
@@ -199,7 +191,6 @@ namespace StationeryStoreManagement.Services
             DisplayItems();
         }
 
-        // Return Item List
         public List<StationeryItem> GetItems()
         {
             return items;
