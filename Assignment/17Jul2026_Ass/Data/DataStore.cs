@@ -2,9 +2,6 @@ using ShopEaseConsoleApp.Models;
 
 namespace ShopEaseConsoleApp.Data
 {
-    /// <summary>
-    /// Simple in-memory "database" shared by all services (singleton-style static store).
-    /// </summary>
     public static class DataStore
     {
         public const string AdminUsername = "admin";
@@ -24,8 +21,6 @@ namespace ShopEaseConsoleApp.Data
         public static int NextCategoryId() => _categoryIdSeq++;
         public static int NextProductId() => ++_productIdSeq;
         public static int NextOrderId() => ++_orderIdSeq;
-
-        // Session state
         public static Customer? LoggedInCustomer { get; set; }
         public static bool IsAdminLoggedIn { get; set; }
 
