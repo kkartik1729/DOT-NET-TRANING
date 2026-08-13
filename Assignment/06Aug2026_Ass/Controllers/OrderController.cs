@@ -14,15 +14,13 @@ namespace _06Aug_2026.Controllers
         {
             this.service = service;
         }
-
-        //fetch all order from order table
+        
         [HttpGet]
         public IActionResult GetOrders()
         {
             return Ok(service.GetOrders());
         }
 
-        //fetch order detail from order table based on OrderId
         [HttpGet("{id}")]
         public IActionResult GetOrderById(int id)
         {
@@ -36,7 +34,6 @@ namespace _06Aug_2026.Controllers
             return Ok(order);
         }
 
-        //add new order record in order table
         [HttpPost]
         public IActionResult AddOrder(Order order)
         {
@@ -62,7 +59,6 @@ namespace _06Aug_2026.Controllers
             return BadRequest(ModelState);
         }
 
-        //remove order record from order table based on OrderId
         [HttpDelete("{id}")]
         public IActionResult DeleteOrder(int id)
         {
