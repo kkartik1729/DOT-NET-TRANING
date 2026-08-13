@@ -1,6 +1,5 @@
 namespace StationeryApi.Models
 {
-    // Used for PATCH requests: only the fields the client sends are updated.
     public class StationeryItemPatchDto
     {
         public string? Name { get; set; }
