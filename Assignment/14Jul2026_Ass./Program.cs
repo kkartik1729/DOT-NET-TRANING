@@ -97,7 +97,6 @@ namespace StationeryStoreManagement
             }
         }
 
-        // ---------------- LOGIN ----------------
         static bool Login()
         {
             const string validUsername = "admin";
@@ -134,7 +133,6 @@ namespace StationeryStoreManagement
             }
         }
 
-        // ---------------- MENU ----------------
         static void ShowMenu()
         {
             Console.WriteLine("\n================= MAIN MENU =================");
@@ -152,7 +150,6 @@ namespace StationeryStoreManagement
             Console.WriteLine("===============================================");
         }
 
-        // ---------------- ADD ITEM ----------------
         static void AddItem()
         {
             Console.WriteLine("\nSelect Item Type:");
@@ -230,7 +227,6 @@ namespace StationeryStoreManagement
             store.AddItem(item);
         }
 
-        // ---------------- SEARCH ----------------
         static void SearchItem()
         {
             Console.WriteLine("\nSearch By:");
@@ -261,7 +257,6 @@ namespace StationeryStoreManagement
             item.DisplayDetails();
         }
 
-        // ---------------- UPDATE ----------------
         static void UpdateItem()
         {
             int id = ReadInt("Enter Item ID to Update: ");
@@ -275,14 +270,12 @@ namespace StationeryStoreManagement
             store.UpdateItem(id, newPrice, newQuantity, newBrand);
         }
 
-        // ---------------- DELETE ----------------
         static void DeleteItem()
         {
             int id = ReadInt("Enter Item ID to Delete: ");
             store.DeleteItem(id);
         }
 
-        // ---------------- PURCHASE ----------------
         static void PurchaseItem()
         {
             int id = ReadInt("Enter Item ID to Purchase: ");
@@ -291,7 +284,6 @@ namespace StationeryStoreManagement
             store.PurchaseItem(id, qty);
         }
 
-        // ---------------- INPUT HELPERS ----------------
         static int ReadInt(string prompt)
         {
             int value;
