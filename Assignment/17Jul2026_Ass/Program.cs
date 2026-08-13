@@ -1,13 +1,6 @@
 using ShopEaseConsoleApp.Models;
 using ShopEaseConsoleApp.Services;
 using ShopEaseConsoleApp.Utils;
-
-// ------------------------------------------------------------
-// ShopEase Console Application - 17Jul2026_Ass
-// A lightweight console-based e-commerce management system
-// demonstrating clean architecture and OOP principles.
-// ------------------------------------------------------------
-
 var authService = new AuthService();
 var productService = new ProductService();
 var categoryService = new CategoryService();
@@ -19,9 +12,6 @@ var reportService = new ReportService();
 
 RunWelcomeMenu();
 
-// =========================================================
-// Top level menu: Register / Login / Admin Login / Exit
-// =========================================================
 void RunWelcomeMenu()
 {
     bool exit = false;
@@ -105,9 +95,6 @@ void AdminLogin()
     RunAdminDashboard();
 }
 
-// =========================================================
-// Admin Dashboard
-// =========================================================
 void RunAdminDashboard()
 {
     bool back = false;
@@ -320,9 +307,6 @@ void ShowReports()
     ConsoleHelper.Pause();
 }
 
-// =========================================================
-// Customer Dashboard
-// =========================================================
 void RunCustomerDashboard(Customer customer)
 {
     bool back = false;
