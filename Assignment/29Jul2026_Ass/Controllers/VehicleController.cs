@@ -7,7 +7,6 @@ namespace _29Jul2026_Ass.Controllers
     [Route("api/[controller]")]
     public class VehicleController : ControllerBase
     {
-        // In-memory data store (seeded data, since only GET and PUT are allowed)
         private static List<Vehicle> vehicles = new List<Vehicle>()
         {
             new Vehicle { Id = 1, VehicleNumber = "MH26AB1234", Brand = "Maruti Suzuki", Model = "Swift", Year = 2021, Type = "Car", IsAvailable = true },
@@ -16,14 +15,13 @@ namespace _29Jul2026_Ass.Controllers
             new Vehicle { Id = 4, VehicleNumber = "MH26GH3456", Brand = "Honda", Model = "City", Year = 2023, Type = "Car", IsAvailable = true }
         };
 
-        // GET: api/Vehicle
+        // Get
         [HttpGet]
         public ActionResult<IEnumerable<Vehicle>> GetAllVehicles()
         {
             return Ok(vehicles);
         }
 
-        // GET: api/Vehicle/{id}
         [HttpGet("{id}")]
         public ActionResult<Vehicle> GetVehicleById(int id)
         {
@@ -35,7 +33,6 @@ namespace _29Jul2026_Ass.Controllers
             return Ok(vehicle);
         }
 
-        // PUT: api/Vehicle/{id}
         [HttpPut("{id}")]
         public IActionResult UpdateVehicle(int id, [FromBody] Vehicle updatedVehicle)
         {
