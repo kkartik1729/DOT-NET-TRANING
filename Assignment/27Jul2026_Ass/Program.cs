@@ -1,9 +1,6 @@
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddControllers();
-
-// Swagger / OpenAPI
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
@@ -17,8 +14,6 @@ builder.Services.AddSwaggerGen(options =>
 
 var app = builder.Build();
 
-// Swagger UI is enabled in all environments (not just Development) so it is
-// available whenever the project is run, as required by the assignment.
 app.UseSwagger();
 app.UseSwaggerUI(options =>
 {
