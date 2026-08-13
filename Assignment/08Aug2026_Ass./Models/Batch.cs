@@ -16,7 +16,6 @@ namespace _08Aug2026_Ass.Models
         [DataType(DataType.Date)]
         public DateTime StartDate { get; set; }
 
-        // One Batch -> Many Students
         [JsonIgnore]
         public ICollection<Student>? Students { get; set; } = new List<Student>();
     }
