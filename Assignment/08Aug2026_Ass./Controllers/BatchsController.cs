@@ -16,7 +16,7 @@ namespace _08Aug2026_Ass.Controllers
             _context = context;
         }
 
-        // GET: api/batches
+        
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Batch>>> GetBatches()
         {
@@ -26,7 +26,7 @@ namespace _08Aug2026_Ass.Controllers
             return Ok(batches);
         }
 
-        // GET: api/batches/5
+    
         [HttpGet("{id}")]
         public async Task<ActionResult<Batch>> GetBatch(int id)
         {
@@ -40,7 +40,7 @@ namespace _08Aug2026_Ass.Controllers
             return Ok(batch);
         }
 
-        // POST: api/batches
+
         [HttpPost]
         public async Task<ActionResult<Batch>> CreateBatch([FromBody] Batch batch)
         {
@@ -52,8 +52,6 @@ namespace _08Aug2026_Ass.Controllers
 
             return CreatedAtAction(nameof(GetBatch), new { id = batch.BatchId }, batch);
         }
-
-        // PUT: api/batches/5
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateBatch(int id, [FromBody] Batch batch)
         {
@@ -75,7 +73,6 @@ namespace _08Aug2026_Ass.Controllers
             return NoContent();
         }
 
-        // DELETE: api/batches/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteBatch(int id)
         {
