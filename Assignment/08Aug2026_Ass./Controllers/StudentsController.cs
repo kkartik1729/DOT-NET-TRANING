@@ -16,7 +16,7 @@ namespace _08Aug2026_Ass.Controllers
             _context = context;
         }
 
-        // GET: api/students
+        
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Student>>> GetStudents()
         {
@@ -27,7 +27,7 @@ namespace _08Aug2026_Ass.Controllers
             return Ok(students);
         }
 
-        // GET: api/students/5
+
         [HttpGet("{id}")]
         public async Task<ActionResult<Student>> GetStudent(int id)
         {
@@ -42,7 +42,7 @@ namespace _08Aug2026_Ass.Controllers
             return Ok(student);
         }
 
-        // POST: api/students
+    
         [HttpPost]
         public async Task<ActionResult<Student>> CreateStudent([FromBody] Student student)
         {
@@ -59,7 +59,6 @@ namespace _08Aug2026_Ass.Controllers
             return CreatedAtAction(nameof(GetStudent), new { id = student.StudentId }, student);
         }
 
-        // PUT: api/students/5
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateStudent(int id, [FromBody] Student student)
         {
@@ -88,8 +87,6 @@ namespace _08Aug2026_Ass.Controllers
 
             return NoContent();
         }
-
-        // DELETE: api/students/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteStudent(int id)
         {
