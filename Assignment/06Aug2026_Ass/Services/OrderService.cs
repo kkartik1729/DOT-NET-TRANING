@@ -4,10 +4,7 @@ using _06Aug_2026.Repository;
 
 namespace _06Aug_2026.Services
 {
-    //implement logic for CRUD method of Order entity
-    //service - business logic
-    //dbcontext - add, savechanges, find, tolist, update, remove
-
+    
     public class OrderService : IOrderService
     {
         private readonly AppDbContext context;
@@ -29,25 +26,24 @@ namespace _06Aug_2026.Services
 
             if (order != null)
             {
-                context.orders.Remove(order); //implementation of remove existing order
-                context.SaveChanges(); //saving changes after deleting order
+                context.orders.Remove(order); 
+                context.SaveChanges(); 
             }
         }
 
         public Order? GetOrderById(int id)
         {
-            return context.orders.Find(id); //implementation of getOrder By ID with help of find
+            return context.orders.Find(id);
         }
 
         public List<Order> GetOrders()
         {
-            return context.orders.ToList(); //implementation of getOrder with help of toList
-        }
+            return context.orders.ToList(); 
 
         public void UpdateOrder(Order order)
         {
-            context.orders.Update(order); //implementation of updating existing Order with help of update
-            context.SaveChanges(); //saving existing updated order in table
+            context.orders.Update(order); 
+            context.SaveChanges();
         }
     }
-}
+
