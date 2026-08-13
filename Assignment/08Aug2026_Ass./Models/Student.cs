@@ -27,15 +27,12 @@ namespace _08Aug2026_Ass.Models
         [Required(ErrorMessage = "DateOfBirth is required")]
         [DataType(DataType.Date)]
         public DateTime DateOfBirth { get; set; }
-
-        // One Batch -> Many Students (FK)
+       
         [Required(ErrorMessage = "BatchId is required")]
         public int BatchId { get; set; }
 
-        [ForeignKey(nameof(BatchId))]
         public Batch? Batch { get; set; }
 
-        // Many Students <-> Many Courses
         public ICollection<Course>? Courses { get; set; } = new List<Course>();
     }
 }
