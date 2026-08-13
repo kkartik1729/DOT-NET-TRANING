@@ -15,14 +15,13 @@ namespace _06Aug_2026.Controllers
             this.service = service;
         }
 
-        //fetch all product from product table
+        //fetch product formn tablee
         [HttpGet]
         public IActionResult GetProducts()
         {
             return Ok(service.GetProducts());
         }
 
-        //fetch product detail from product table based on PId
         [HttpGet("{id}")]
         public IActionResult GetProductById(int id)
         {
@@ -36,7 +35,7 @@ namespace _06Aug_2026.Controllers
             return Ok(product);
         }
 
-        //add new product record in product table
+        //add new product 
         [HttpPost]
         public IActionResult AddProduct(Product product)
         {
@@ -49,7 +48,7 @@ namespace _06Aug_2026.Controllers
             return BadRequest(ModelState);
         }
 
-        //modify product details from product table based on PId
+        //modify product 
         [HttpPut]
         public IActionResult UpdateProduct(Product product)
         {
@@ -62,7 +61,7 @@ namespace _06Aug_2026.Controllers
             return BadRequest(ModelState);
         }
 
-        //remove product record from product table based on PId
+        //remove product 
         [HttpDelete("{id}")]
         public IActionResult DeleteProduct(int id)
         {
