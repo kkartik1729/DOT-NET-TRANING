@@ -20,21 +20,18 @@ namespace _08Aug2026_Ass.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            // One Batch -> Many Students
             modelBuilder.Entity<Batch>()
                 .HasMany(b => b.Students)
                 .WithOne(s => s.Batch)
                 .HasForeignKey(s => s.BatchId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            // One Teacher -> Many Courses
             modelBuilder.Entity<Teacher>()
                 .HasMany(t => t.Courses)
                 .WithOne(c => c.Teacher)
                 .HasForeignKey(c => c.TeacherId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            // Many Students <-> Many Courses (implicit join table "StudentCourses")
             modelBuilder.Entity<Student>()
                 .HasMany(s => s.Courses)
                 .WithMany(c => c.Students)
@@ -48,7 +45,6 @@ namespace _08Aug2026_Ass.Data
                         j.ToTable("StudentCourses");
                     });
 
-            // Unique email constraints (optional but sensible)
             modelBuilder.Entity<Student>()
                 .HasIndex(s => s.Email)
                 .IsUnique();
