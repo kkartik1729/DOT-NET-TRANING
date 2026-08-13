@@ -16,7 +16,6 @@ namespace _08Aug2026_Ass.Controllers
             _context = context;
         }
 
-        // GET: api/teachers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Teacher>>> GetTeachers()
         {
@@ -26,7 +25,6 @@ namespace _08Aug2026_Ass.Controllers
             return Ok(teachers);
         }
 
-        // GET: api/teachers/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Teacher>> GetTeacher(int id)
         {
@@ -40,7 +38,6 @@ namespace _08Aug2026_Ass.Controllers
             return Ok(teacher);
         }
 
-        // POST: api/teachers
         [HttpPost]
         public async Task<ActionResult<Teacher>> CreateTeacher([FromBody] Teacher teacher)
         {
@@ -53,7 +50,6 @@ namespace _08Aug2026_Ass.Controllers
             return CreatedAtAction(nameof(GetTeacher), new { id = teacher.TeacherId }, teacher);
         }
 
-        // PUT: api/teachers/5
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateTeacher(int id, [FromBody] Teacher teacher)
         {
@@ -76,7 +72,6 @@ namespace _08Aug2026_Ass.Controllers
             return NoContent();
         }
 
-        // DELETE: api/teachers/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTeacher(int id)
         {
