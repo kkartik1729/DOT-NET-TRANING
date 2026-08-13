@@ -19,9 +19,6 @@ namespace _08Aug2026_Ass.Models
         [Required(ErrorMessage = "Experience is required")]
         [Range(1, 40, ErrorMessage = "Experience must be between 1 and 40 years")]
         public int Experience { get; set; }
-
-        // One Teacher -> Many Courses
-        [JsonIgnore]
         public ICollection<Course>? Courses { get; set; } = new List<Course>();
     }
 }
