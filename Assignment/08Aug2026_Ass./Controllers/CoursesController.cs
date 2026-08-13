@@ -15,8 +15,7 @@ namespace _08Aug2026_Ass.Controllers
         {
             _context = context;
         }
-
-        // GET: api/courses
+        
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Course>>> GetCourses()
         {
@@ -27,7 +26,7 @@ namespace _08Aug2026_Ass.Controllers
             return Ok(courses);
         }
 
-        // GET: api/courses/5
+        
         [HttpGet("{id}")]
         public async Task<ActionResult<Course>> GetCourse(int id)
         {
@@ -42,7 +41,6 @@ namespace _08Aug2026_Ass.Controllers
             return Ok(course);
         }
 
-        // POST: api/courses
         [HttpPost]
         public async Task<ActionResult<Course>> CreateCourse([FromBody] Course course)
         {
@@ -59,7 +57,6 @@ namespace _08Aug2026_Ass.Controllers
             return CreatedAtAction(nameof(GetCourse), new { id = course.CourseId }, course);
         }
 
-        // PUT: api/courses/5
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateCourse(int id, [FromBody] Course course)
         {
@@ -86,7 +83,6 @@ namespace _08Aug2026_Ass.Controllers
             return NoContent();
         }
 
-        // DELETE: api/courses/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCourse(int id)
         {
