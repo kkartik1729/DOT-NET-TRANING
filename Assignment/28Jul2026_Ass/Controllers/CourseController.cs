@@ -9,24 +9,16 @@ namespace CourseRegistrationSystem.Controllers
     public class CourseController : ControllerBase
     {
         private readonly ICourseService _courseService;
-
-        // ICourseService is injected via the constructor (Dependency Injection),
-        // registered in Program.cs.
         public CourseController(ICourseService courseService)
         {
             _courseService = courseService;
         }
-
-        /// <summary>View all available courses.</summary>
-        // GET: api/course
         [HttpGet]
         public ActionResult<IEnumerable<Course>> GetAll()
         {
             return Ok(_courseService.GetAll());
         }
 
-        /// <summary>View a single course by Id.</summary>
-        // GET: api/course/{id}
         [HttpGet("{id:int}")]
         public ActionResult<Course> GetById(int id)
         {
@@ -37,8 +29,6 @@ namespace CourseRegistrationSystem.Controllers
             return Ok(course);
         }
 
-        /// <summary>Register for a new course.</summary>
-        // POST: api/course
         [HttpPost]
         public ActionResult<Course> Register([FromBody] Course course)
         {
@@ -46,8 +36,6 @@ namespace CourseRegistrationSystem.Controllers
             return CreatedAtAction(nameof(GetById), new { id = registered.Id }, registered);
         }
 
-        /// <summary>Update the duration of an existing course.</summary>
-        // PUT: api/course/{id}/duration
         [HttpPut("{id:int}/duration")]
         public IActionResult UpdateDuration(int id, [FromBody] UpdateDurationDto dto)
         {
@@ -58,8 +46,6 @@ namespace CourseRegistrationSystem.Controllers
             return Ok(_courseService.GetById(id));
         }
 
-        /// <summary>Cancel (remove) a course.</summary>
-        // DELETE: api/course/{id}
         [HttpDelete("{id:int}")]
         public IActionResult Cancel(int id)
         {
